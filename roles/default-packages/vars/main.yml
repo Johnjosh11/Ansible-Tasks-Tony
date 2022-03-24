@@ -1,0 +1,29 @@
+---
+apt_packages:
+  - blender
+  - inkscape
+  - gimp
+
+base_packages:
+  - curl
+  - apt-transport-https
+  - wget
+  - nmap
+  - aptitude
+  - coreutils
+  - git
+  - gpg
+  - ca-certificates
+  - apt-transport-https
+  - gconf2
+  - libasound2
+  - libgtk2.0-0
+  - libxss1
+  - libxcb-dri3-0
+  - libdrm2
+  - libgbm1
+  - libxshmfence1
+  - gnupg2
+  - software-properties-common
+  - libsdl2-dev
+  - libxcb-xtest0

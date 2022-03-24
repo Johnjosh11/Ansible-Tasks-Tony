@@ -1,0 +1,13 @@
+# installing ZOOM meeting app, dependency packages are already installed with base packages
+#
+
+- name: Dowloading zoom package (wget)
+  get_url:
+    url: https://zoom.us/client/latest/zoom_amd64.deb
+    dest: /opt/zoom.deb
+    
+  
+  
+- name: Install zoom.deb package
+  apt:
+    deb: /opt/zoom.deb

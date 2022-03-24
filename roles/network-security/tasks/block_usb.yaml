@@ -1,0 +1,9 @@
+#Removing the USB drive permissions by changing the Media file perissions
+- name: change Media directory permissions
+  file:
+    path: /media
+    state: directory
+    owner: root
+    group: root
+    mode: 0444
+    recurse: yes

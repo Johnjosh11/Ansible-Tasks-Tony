@@ -1,0 +1,6 @@
+# installing default packages with apt
+- name: "install 'base_packages' packages (mentioned in the vars file)"
+  apt:
+    name: "{{ base_packages }}"
+    state: present
+  become: true

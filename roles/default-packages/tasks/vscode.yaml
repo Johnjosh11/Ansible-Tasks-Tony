@@ -1,0 +1,21 @@
+# installing Visual Studio Code, dependency packages are already installed with base packages
+#
+
+- name: Add microsoft key (apt)
+  become: true
+  apt_key:
+    url: 'https://packages.microsoft.com/keys/microsoft.asc'
+    state: present
+
+- name: Adding VS Code repo (apt)
+  become: true
+  apt_repository:
+    repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
+    state: present
+
+
+- name: "install 'VsCode'"
+  apt:
+    name: "code"
+    state: present
+  become: true

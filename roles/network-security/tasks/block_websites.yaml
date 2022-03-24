@@ -1,0 +1,6 @@
+- name: Modifying_hostfile
+  become: true 
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+

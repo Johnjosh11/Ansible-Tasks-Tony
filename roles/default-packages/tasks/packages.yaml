@@ -1,0 +1,25 @@
+#Installing packages 
+#- name: install packages in ubuntu
+#   apt:
+#      name: "{{ item }}"
+#     state: present
+#     udpate_cache: true
+#   become: true
+#   when: ansible_distribution == "Ubuntu"
+ 
+#   loop:
+#     - blender
+#- name: "install packages in ubuntu"
+#    yum:
+#      name: {{ item }}
+#      state: present
+#      update_cache=yes
+#      when: ansible_distribution == "CentOS"
+#
+#
+- name: "install 'apt' packages (mentioned in the vars file)"
+  apt:
+    name: "{{ apt_packages }}"
+    state: present
+  become: true
+

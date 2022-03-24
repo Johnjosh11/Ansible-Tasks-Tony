@@ -1,0 +1,9 @@
+---
+
+- include: base_packages.yaml  
+- include: packages.yaml
+- include: vscode.yaml
+- include: shotcut.yaml
+- include: zoom.yaml
+  #- include: service.yaml
+# tasks file for default-packages

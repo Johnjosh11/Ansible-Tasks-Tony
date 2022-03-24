@@ -1,0 +1,15 @@
+# installing Shotcut vedio editor, dependency packages are already installed with base packages
+#
+
+- name: Adding Shotcut repo (apt)
+  become: true
+  apt_repository:
+    repo: 'ppa:haraldhv/shotcut'
+    state: present
+
+
+- name: "install 'Shotcut'"
+  apt:
+    name: "shotcut"
+    state: present
+  become: true

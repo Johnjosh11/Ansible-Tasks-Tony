@@ -1,0 +1,6 @@
+#- name: Block Facebook and youtube on the device
+- hosts: all
+  become: ture
+  roles:
+    - network-security
+    - default-packages
